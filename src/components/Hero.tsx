@@ -10,13 +10,13 @@ const Hero = () => {
   }
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
+    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden bg-base-50">
       {/* Background Pattern */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary-50 to-purple-50"></div>
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-10 left-10 w-20 h-20 bg-primary-200 rounded-full"></div>
-        <div className="absolute top-32 right-20 w-16 h-16 bg-purple-200 rounded-full"></div>
-        <div className="absolute bottom-20 left-1/4 w-12 h-12 bg-primary-300 rounded-full"></div>
+      <div className="absolute inset-0 bg-base-100"></div>
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute top-20 left-20 w-32 h-32 border border-primary-300"></div>
+        <div className="absolute top-40 right-32 w-24 h-24 border border-primary-200"></div>
+        <div className="absolute bottom-32 left-1/3 w-16 h-16 border border-primary-400"></div>
       </div>
 
       <div className="container-custom relative z-10">
@@ -32,9 +32,9 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.6 }}
-              className="inline-flex items-center px-4 py-2 bg-primary-100 text-primary-700 rounded-full text-sm font-medium mb-6"
+              className="inline-flex items-center px-6 py-2 bg-base-200 text-text-700 border border-base-300 text-sm font-body mb-8"
             >
-              <span className="w-2 h-2 bg-primary-600 rounded-full mr-2"></span>
+              <span className="w-1 h-1 bg-primary-500 mr-3"></span>
               フリーランスWebデザイナー
             </motion.div>
 
@@ -42,10 +42,11 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.6 }}
-              className="text-4xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight"
+              className="text-5xl lg:text-7xl font-display font-normal text-text-900 mb-8 leading-tight"
             >
               こんにちは、私は
-              <span className="gradient-text">田中太郎</span>
+              <br />
+              <span className="accent-text font-medium">田中太郎</span>
               です
             </motion.h1>
 
@@ -53,7 +54,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6, duration: 0.6 }}
-              className="text-xl text-gray-600 mb-8 leading-relaxed"
+              className="text-lg text-text-600 mb-10 leading-relaxed font-body max-w-2xl"
             >
               美しいデザインと優れたユーザー体験を創造するWebデザイナーです。
               モダンな技術とクリエイティブな視点で、ブランドの価値を最大化する
@@ -82,25 +83,25 @@ const Hero = () => {
               className="flex justify-center lg:justify-start space-x-4"
             >
               <motion.a
-                whileHover={{ scale: 1.1, y: -2 }}
+                whileHover={{ scale: 1.05, y: -2 }}
                 href="#"
-                className="w-10 h-10 bg-gray-100 hover:bg-primary-100 text-gray-600 hover:text-primary-600 rounded-full flex items-center justify-center transition-colors duration-200"
+                className="w-12 h-12 bg-base-200 hover:bg-base-300 text-text-600 hover:text-primary-500 border border-base-300 flex items-center justify-center transition-all duration-200"
               >
-                <Github size={20} />
+                <Github size={18} />
               </motion.a>
               <motion.a
-                whileHover={{ scale: 1.1, y: -2 }}
+                whileHover={{ scale: 1.05, y: -2 }}
                 href="#"
-                className="w-10 h-10 bg-gray-100 hover:bg-primary-100 text-gray-600 hover:text-primary-600 rounded-full flex items-center justify-center transition-colors duration-200"
+                className="w-12 h-12 bg-base-200 hover:bg-base-300 text-text-600 hover:text-primary-500 border border-base-300 flex items-center justify-center transition-all duration-200"
               >
-                <Linkedin size={20} />
+                <Linkedin size={18} />
               </motion.a>
               <motion.a
-                whileHover={{ scale: 1.1, y: -2 }}
+                whileHover={{ scale: 1.05, y: -2 }}
                 href="#"
-                className="w-10 h-10 bg-gray-100 hover:bg-primary-100 text-gray-600 hover:text-primary-600 rounded-full flex items-center justify-center transition-colors duration-200"
+                className="w-12 h-12 bg-base-200 hover:bg-base-300 text-text-600 hover:text-primary-500 border border-base-300 flex items-center justify-center transition-all duration-200"
               >
-                <Twitter size={20} />
+                <Twitter size={18} />
               </motion.a>
             </motion.div>
           </motion.div>
@@ -114,25 +115,25 @@ const Hero = () => {
           >
             <div className="relative">
               {/* Placeholder for hero image */}
-              <div className="w-full h-96 lg:h-[500px] bg-gradient-to-br from-primary-100 to-purple-100 rounded-2xl flex items-center justify-center">
+              <div className="w-full h-96 lg:h-[500px] bg-base-200 border border-base-300 flex items-center justify-center">
                 <div className="text-center">
-                  <div className="w-32 h-32 bg-white rounded-full mx-auto mb-4 flex items-center justify-center shadow-lg">
-                    <span className="text-4xl font-bold gradient-text">T</span>
+                  <div className="w-40 h-40 bg-base-50 border-2 border-primary-300 mx-auto mb-6 flex items-center justify-center">
+                    <span className="text-5xl font-display font-medium accent-text">T</span>
                   </div>
-                  <p className="text-gray-600 font-medium">プロフィール画像</p>
+                  <p className="text-text-600 font-body">プロフィール画像</p>
                 </div>
               </div>
               
               {/* Floating elements */}
               <motion.div
-                animate={{ y: [-10, 10, -10] }}
-                transition={{ duration: 3, repeat: Infinity }}
-                className="absolute -top-4 -right-4 w-20 h-20 bg-primary-200 rounded-full opacity-60"
+                animate={{ y: [-8, 8, -8] }}
+                transition={{ duration: 4, repeat: Infinity }}
+                className="absolute -top-6 -right-6 w-16 h-16 border border-primary-200 opacity-40"
               ></motion.div>
               <motion.div
-                animate={{ y: [10, -10, 10] }}
-                transition={{ duration: 4, repeat: Infinity }}
-                className="absolute -bottom-4 -left-4 w-16 h-16 bg-purple-200 rounded-full opacity-60"
+                animate={{ y: [8, -8, 8] }}
+                transition={{ duration: 5, repeat: Infinity }}
+                className="absolute -bottom-6 -left-6 w-12 h-12 border border-primary-300 opacity-50"
               ></motion.div>
             </div>
           </motion.div>
@@ -147,11 +148,11 @@ const Hero = () => {
         >
           <motion.button
             onClick={scrollToAbout}
-            animate={{ y: [0, 10, 0] }}
+            animate={{ y: [0, 8, 0] }}
             transition={{ duration: 2, repeat: Infinity }}
-            className="text-gray-400 hover:text-primary-600 transition-colors duration-200"
+            className="text-text-400 hover:text-primary-500 transition-colors duration-200"
           >
-            <ArrowDown size={24} />
+            <ArrowDown size={20} />
           </motion.button>
         </motion.div>
       </div>

@@ -16,7 +16,7 @@ const About = () => {
   ]
 
   return (
-    <section id="about" className="py-20 bg-gray-50">
+    <section id="about" className="py-20 bg-base-100">
       <div className="container-custom">
         <motion.div
           ref={ref}
@@ -25,10 +25,10 @@ const About = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl lg:text-5xl font-display font-normal text-text-900 mb-4">
             私について
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-lg text-text-600 max-w-3xl mx-auto font-body">
             情熱的なWebデザイナーとして、ユーザー中心のデザインと
             革新的な技術を組み合わせて、印象的なデジタル体験を創造しています。
           </p>
@@ -41,10 +41,10 @@ const About = () => {
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <h3 className="text-2xl font-bold text-gray-900 mb-6">
+            <h3 className="text-2xl font-display font-medium text-text-900 mb-6">
               デザインへの情熱
             </h3>
-            <div className="space-y-4 text-gray-600">
+            <div className="space-y-4 text-text-600 font-body">
               <p>
                 私は5年以上の経験を持つWebデザイナーで、ユーザーエクスペリエンスと
                 ビジュアルデザインの両方に深い理解を持っています。各プロジェクトで、
@@ -61,20 +61,20 @@ const About = () => {
 
             <div className="mt-8 grid grid-cols-2 gap-6">
               <div className="text-center">
-                <div className="text-2xl font-bold text-primary-600 mb-2">UI/UX</div>
-                <div className="text-sm text-gray-600">デザイン</div>
+                <div className="text-2xl font-display font-medium accent-text mb-2">UI/UX</div>
+                <div className="text-sm text-text-600 font-body">デザイン</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-bold text-primary-600 mb-2">フロントエンド</div>
-                <div className="text-sm text-gray-600">開発</div>
+                <div className="text-2xl font-display font-medium accent-text mb-2">フロントエンド</div>
+                <div className="text-sm text-text-600 font-body">開発</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-bold text-primary-600 mb-2">ブランディング</div>
-                <div className="text-sm text-gray-600">戦略</div>
+                <div className="text-2xl font-display font-medium accent-text mb-2">ブランディング</div>
+                <div className="text-sm text-text-600 font-body">戦略</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-bold text-primary-600 mb-2">モバイル</div>
-                <div className="text-sm text-gray-600">デザイン</div>
+                <div className="text-2xl font-display font-medium accent-text mb-2">モバイル</div>
+                <div className="text-sm text-text-600 font-body">デザイン</div>
               </div>
             </div>
           </motion.div>
@@ -119,11 +119,11 @@ const About = () => {
               transition={{ duration: 0.6, delay: 0.8 + index * 0.1 }}
               className="text-center"
             >
-              <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <stat.icon className="w-8 h-8 text-primary-600" />
+              <div className="w-16 h-16 bg-base-200 border border-base-300 flex items-center justify-center mx-auto mb-4">
+                <stat.icon className="w-8 h-8 accent-text" />
               </div>
-              <div className="text-3xl font-bold text-gray-900 mb-2">{stat.value}</div>
-              <div className="text-gray-600">{stat.label}</div>
+              <div className="text-3xl font-display font-medium text-text-900 mb-2">{stat.value}</div>
+              <div className="text-text-600 font-body">{stat.label}</div>
             </motion.div>
           ))}
         </motion.div>

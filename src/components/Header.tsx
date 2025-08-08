@@ -45,8 +45,8 @@ const Header = () => {
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
           <motion.div
-            whileHover={{ scale: 1.05 }}
-            className="text-2xl font-bold gradient-text"
+            whileHover={{ scale: 1.02 }}
+            className="text-2xl font-display font-medium accent-text"
           >
             Tanaka
           </motion.div>
@@ -58,7 +58,7 @@ const Header = () => {
                 key={item.name}
                 whileHover={{ y: -2 }}
                 onClick={() => scrollToSection(item.href)}
-                className="text-gray-700 hover:text-primary-600 font-medium transition-colors duration-200"
+                className="text-text-700 hover:text-primary-500 font-body transition-colors duration-200"
               >
                 {item.name}
               </motion.button>
@@ -68,7 +68,7 @@ const Header = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden p-2 text-gray-700 hover:text-primary-600 transition-colors duration-200"
+            className="lg:hidden p-2 text-text-700 hover:text-primary-500 transition-colors duration-200"
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -81,14 +81,14 @@ const Header = () => {
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
-              className="lg:hidden bg-white border-t border-gray-100"
+              className="lg:hidden bg-base-50 border-t border-base-200"
             >
               <nav className="py-4 space-y-2">
                 {navItems.map((item) => (
                   <button
                     key={item.name}
                     onClick={() => scrollToSection(item.href)}
-                    className="block w-full text-left px-4 py-2 text-gray-700 hover:text-primary-600 hover:bg-gray-50 font-medium transition-colors duration-200"
+                    className="block w-full text-left px-4 py-2 text-text-700 hover:text-primary-500 hover:bg-base-100 font-body transition-colors duration-200"
                   >
                     {item.name}
                   </button>
