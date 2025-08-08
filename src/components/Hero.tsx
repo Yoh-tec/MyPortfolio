@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
-import { ArrowDown, Github, Linkedin, Twitter } from 'lucide-react'
+import { ArrowDown, Github, Linkedin, Twitter, Sparkles } from 'lucide-react'
+import PlayfulButton from './PlayfulButton'
 
 const Hero = () => {
   const scrollToAbout = () => {
@@ -44,10 +45,33 @@ const Hero = () => {
               transition={{ delay: 0.4, duration: 0.6 }}
               className="text-5xl lg:text-7xl font-display font-normal text-text-900 mb-8 leading-tight"
             >
-              こんにちは、私は
+              <motion.span
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.5, duration: 0.6 }}
+              >
+                こんにちは、私は
+              </motion.span>
               <br />
-              <span className="accent-text font-medium">田中太郎</span>
-              です
+              <motion.span
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: 0.7, duration: 0.8, type: "spring" }}
+                className="accent-text font-medium inline-block"
+                whileHover={{ 
+                  scale: 1.05,
+                  rotate: [0, -2, 2, 0],
+                }}
+              >
+                田中太郎
+              </motion.span>
+              <motion.span
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.9, duration: 0.6 }}
+              >
+                です
+              </motion.span>
             </motion.h1>
 
             <motion.p
@@ -67,12 +91,18 @@ const Hero = () => {
               transition={{ delay: 0.8, duration: 0.6 }}
               className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8"
             >
-              <button className="btn-primary">
-                作品を見る
-              </button>
-              <button className="btn-secondary">
+              <PlayfulButton variant="primary">
+                <motion.div
+                  className="flex items-center"
+                  whileHover={{ scale: 1.05 }}
+                >
+                  <Sparkles size={16} className="mr-2" />
+                  作品を見る
+                </motion.div>
+              </PlayfulButton>
+              <PlayfulButton variant="secondary">
                 お問い合わせ
-              </button>
+              </PlayfulButton>
             </motion.div>
 
             {/* Social Links */}

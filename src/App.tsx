@@ -8,6 +8,8 @@ import Projects from './components/Projects'
 import Experience from './components/Experience'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
+import GeometricBackground from './components/GeometricBackground'
+import InteractiveCursor from './components/InteractiveCursor'
 
 function App() {
   const [isLoading, setIsLoading] = useState(true)
@@ -37,7 +39,9 @@ function App() {
   }
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-base-50">
+      <GeometricBackground />
+      <InteractiveCursor />
       <AnimatePresence>
         <Header />
         <main>
