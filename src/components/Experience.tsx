@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
-import { Calendar, MapPin, Building, GraduationCap, Shield, Code } from 'lucide-react'
+import { Calendar, MapPin, Building, GraduationCap, Code } from 'lucide-react'
 
 const Experience = () => {
   const [ref, inView] = useInView({
@@ -232,7 +232,7 @@ const Experience = () => {
             >
               <h4 className="text-lg font-bold text-gray-900 mb-4">対応可能言語</h4>
               <div className="space-y-3">
-                {languages.slice(0, 4).map((lang, index) => (
+                {languages.slice(0, 4).map((lang) => (
                   <div key={lang.name}>
                     <div className="flex justify-between text-sm mb-1">
                       <span>{lang.name}</span>

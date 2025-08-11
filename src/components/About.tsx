@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
-import { Award, Users, Clock, Target, Shield, Code, Globe } from 'lucide-react'
+import { Award, Users, Clock, Target } from 'lucide-react'
 
 const About = () => {
   const [ref, inView] = useInView({
