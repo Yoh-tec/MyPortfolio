@@ -2,7 +2,7 @@
   "name": "portfolio-me",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://[あなたのGitHubユーザー名].github.io/portfolio_me",
+  "homepage": "https://Yoh-tec.github.io/portfolio_me",
   "type": "module",
   "scripts": {
     "dev": "vite",
