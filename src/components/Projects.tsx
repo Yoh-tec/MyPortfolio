@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
-import { ExternalLink, Github, Eye } from 'lucide-react'
+import { ExternalLink, Github, Eye, BookOpen, MessageSquare, User, Terminal, Globe } from 'lucide-react'
 
 const Projects = () => {
   const [ref, inView] = useInView({
@@ -11,73 +11,71 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: 'Eコマースプラットフォーム',
-      description: 'モダンなEコマースサイトのUI/UXデザインとフロントエンド開発。レスポンシブデザインと高速なパフォーマンスを実現。',
+      title: 'macOS・PDFブックマーク抽出サイト',
+      description: 'macOS環境でのPDFファイルからブックマーク情報を効率的に抽出・管理するWebサイト。ファイル処理の自動化により作業効率を大幅に向上。',
       image: '/project1.jpg',
-      category: 'Webデザイン',
-      technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Figma'],
+      category: 'Webアプリケーション',
+      technologies: ['Python', 'React', 'TypeScript', 'PDF処理', '自動化'],
       liveUrl: '#',
       githubUrl: '#',
       featured: true
     },
     {
       id: 2,
-      title: 'モバイルアプリUI',
-      description: 'フィンテックアプリのモバイルUIデザイン。ユーザビリティを重視した直感的なインターフェースを設計。',
+      title: '生成AIチャット登録フォームWebアプリ',
+      description: '生成AIチャット機能を活用した登録フォームWebアプリケーション。AIによる入力支援とバリデーション機能を実装。',
       image: '/project2.jpg',
-      category: 'UI/UX',
-      technologies: ['Figma', 'Adobe XD', 'プロトタイピング'],
+      category: 'Webアプリケーション',
+      technologies: ['React', 'TypeScript', 'AI API', 'フォーム処理', 'バリデーション'],
       liveUrl: '#',
       githubUrl: '#',
       featured: true
     },
     {
       id: 3,
-      title: '企業ブランディングサイト',
-      description: 'スタートアップ企業のブランディングサイト。ブランドアイデンティティを反映したモダンなデザイン。',
+      title: 'エンジニア自己紹介ポートフォリオサイト',
+      description: '本サイト。エンジニアのスキルと成果物を美しく展示するポートフォリオサイト。モダンなデザインとレスポンシブ対応。',
       image: '/project3.jpg',
-      category: 'ブランディング',
-      technologies: ['Next.js', 'Framer Motion', 'GSAP'],
+      category: 'ポートフォリオ',
+      technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'レスポンシブ'],
       liveUrl: '#',
       githubUrl: '#',
       featured: false
     },
     {
       id: 4,
-      title: 'ダッシュボードデザイン',
-      description: 'データ可視化ダッシュボードのUIデザイン。複雑なデータを分かりやすく表示するインターフェース。',
+      title: 'ファイル処理自動化ツール',
+      description: '業務で頻繁に行うファイル処理作業を自動化するCLIツール。Pythonとシェルスクリプトを組み合わせて開発。',
       image: '/project4.jpg',
-      category: 'UI/UX',
-      technologies: ['React', 'D3.js', 'Chart.js'],
+      category: 'CLIツール',
+      technologies: ['Python', 'シェルスクリプト', 'CLI', 'ファイル処理', '自動化'],
       liveUrl: '#',
       githubUrl: '#',
       featured: false
     },
     {
       id: 5,
-      title: 'ポートフォリオサイト',
-      description: 'クリエイター向けポートフォリオサイト。作品を美しく展示するためのカスタムデザイン。',
+      title: 'Excelマクロ業務効率化',
+      description: '企業の業務プロセスを効率化するExcelマクロ・VBA開発。データ処理とレポート生成の自動化を実現。',
       image: '/project5.jpg',
-      category: 'Webデザイン',
-      technologies: ['React', 'Three.js', 'GSAP'],
+      category: 'Excelマクロ',
+      technologies: ['Excel VBA', 'マクロ', 'データ処理', 'レポート生成', '業務効率化'],
       liveUrl: '#',
       githubUrl: '#',
       featured: false
     },
     {
       id: 6,
-      title: 'ランディングページ',
-      description: 'SaaS製品のランディングページ。コンバージョン率を向上させるための最適化されたデザイン。',
+      title: 'Chrome拡張機能',
+      description: 'ブラウザでの作業効率化のためのChrome拡張機能。カスタマイズ可能なツールバーとショートカット機能。',
       image: '/project6.jpg',
-      category: 'マーケティング',
-      technologies: ['HTML', 'CSS', 'JavaScript'],
+      category: 'Chrome拡張',
+      technologies: ['JavaScript', 'Chrome API', '拡張機能', 'UI/UX', '効率化'],
       liveUrl: '#',
       githubUrl: '#',
       featured: false
     }
   ]
-
-  const categories = ['すべて', 'Webデザイン', 'UI/UX', 'ブランディング', 'マーケティング']
 
   return (
     <section id="projects" className="py-20 bg-gray-50">
@@ -90,11 +88,11 @@ const Projects = () => {
           className="text-center mb-16"
         >
           <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-            作品集
+            成果物
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            これまでに手がけたプロジェクトの一部をご紹介します。
-            各プロジェクトで、クライアントのニーズに合わせた
+            これまでに開発したプロジェクトの一部をご紹介します。
+            各プロジェクトで、効率化とセキュリティを重視した
             最適なソリューションを提供しています。
           </p>
         </motion.div>
@@ -117,9 +115,12 @@ const Projects = () => {
                 <div className="relative h-64 bg-gradient-to-br from-primary-100 to-purple-100 overflow-hidden">
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="text-center">
-                      <div className="w-20 h-20 bg-white rounded-full mx-auto mb-4 flex items-center justify-center shadow-lg">
-                        <span className="text-2xl font-bold gradient-text">P{project.id}</span>
-                      </div>
+                      {project.id === 1 && (
+                        <BookOpen className="w-20 h-20 text-primary-600 mx-auto mb-4" />
+                      )}
+                      {project.id === 2 && (
+                        <MessageSquare className="w-20 h-20 text-primary-600 mx-auto mb-4" />
+                      )}
                       <p className="text-gray-600 font-medium">プロジェクト画像</p>
                     </div>
                   </div>
@@ -212,9 +213,18 @@ const Projects = () => {
                 <div className="relative h-48 bg-gradient-to-br from-primary-100 to-purple-100 overflow-hidden">
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="text-center">
-                      <div className="w-16 h-16 bg-white rounded-full mx-auto mb-3 flex items-center justify-center shadow-lg">
-                        <span className="text-xl font-bold gradient-text">P{project.id}</span>
-                      </div>
+                      {project.id === 3 && (
+                        <User className="w-16 h-16 text-primary-600 mx-auto mb-3" />
+                      )}
+                      {project.id === 4 && (
+                        <Terminal className="w-16 h-16 text-primary-600 mx-auto mb-3" />
+                      )}
+                      {project.id === 5 && (
+                        <BookOpen className="w-16 h-16 text-primary-600 mx-auto mb-3" />
+                      )}
+                      {project.id === 6 && (
+                        <Globe className="w-16 h-16 text-primary-600 mx-auto mb-3" />
+                      )}
                       <p className="text-gray-600 text-sm">プロジェクト画像</p>
                     </div>
                   </div>

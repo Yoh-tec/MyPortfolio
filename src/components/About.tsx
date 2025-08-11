@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
-import { Award, Users, Clock, Target } from 'lucide-react'
+import { Award, Users, Clock, Target, Shield, Code, Globe } from 'lucide-react'
 
 const About = () => {
   const [ref, inView] = useInView({
@@ -9,10 +9,10 @@ const About = () => {
   })
 
   const stats = [
-    { icon: Award, value: '50+', label: '完了プロジェクト' },
-    { icon: Users, value: '30+', label: '満足したクライアント' },
-    { icon: Clock, value: '5+', label: '年の経験' },
-    { icon: Target, value: '100%', label: '納期遵守率' },
+    { icon: Award, value: '最短1-2日', label: '開発期間' },
+    { icon: Users, value: '100%', label: 'セキュリティ重視' },
+    { icon: Clock, value: '4年+', label: '情報セキュリティ経験' },
+    { icon: Target, value: '多言語', label: '対応可能言語' },
   ]
 
   return (
@@ -29,8 +29,8 @@ const About = () => {
             私について
           </h2>
           <p className="text-lg text-text-600 max-w-3xl mx-auto font-body">
-            情熱的なWebデザイナーとして、ユーザー中心のデザインと
-            革新的な技術を組み合わせて、印象的なデジタル体験を創造しています。
+            システムエンジニア & Webデザイナーとして、サイバーセキュリティの専門知識を活かし、
+            安全で高品質なシステム開発を提供しています。
           </p>
         </motion.div>
 
@@ -42,39 +42,37 @@ const About = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <h3 className="text-2xl font-display font-medium text-text-900 mb-6">
-              デザインへの情熱
+              サイバーセキュリティの専門家
             </h3>
             <div className="space-y-4 text-text-600 font-body">
               <p>
-                私は5年以上の経験を持つWebデザイナーで、ユーザーエクスペリエンスと
-                ビジュアルデザインの両方に深い理解を持っています。各プロジェクトで、
-                クライアントのビジョンを理解し、ブランドの価値を最大化する
-                美しく機能的なソリューションを提供しています。
+                法政大学情報系学科で情報セキュリティを専攻し、現在はサイバーセキュリティ企業で
+                システムエンジニアとして勤務しています。セキュリティの視点から、
+                安全で信頼性の高いシステム開発を心がけています。
               </p>
               <p>
-                最新のデザイントレンドと技術を常に学び、創造性と実用性の
-                バランスを取ったデザインを心がけています。レスポンシブデザイン、
-                アクセシビリティ、パフォーマンスを重視し、すべてのデバイスで
-                素晴らしい体験を提供します。
+                基本的には、自分が欲しい機能やサイト、またはお客様の要望に沿ったシステムを
+                作成しています。ファイル内部調査などの案件で面倒なファイル処理を自動化したり、
+                簡単に運用できるポートフォリオサイトの作成など、効率化を重視した開発を行っています。
               </p>
             </div>
 
             <div className="mt-8 grid grid-cols-2 gap-6">
               <div className="text-center">
-                <div className="text-2xl font-display font-medium accent-text mb-2">UI/UX</div>
-                <div className="text-sm text-text-600 font-body">デザイン</div>
+                <div className="text-2xl font-display font-medium accent-text mb-2">システム開発</div>
+                <div className="text-sm text-text-600 font-body">Webアプリ・CLI</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-display font-medium accent-text mb-2">フロントエンド</div>
-                <div className="text-sm text-text-600 font-body">開発</div>
+                <div className="text-2xl font-display font-medium accent-text mb-2">セキュリティ</div>
+                <div className="text-sm text-text-600 font-body">安心安全</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-display font-medium accent-text mb-2">ブランディング</div>
-                <div className="text-sm text-text-600 font-body">戦略</div>
+                <div className="text-2xl font-display font-medium accent-text mb-2">自動化</div>
+                <div className="text-sm text-text-600 font-body">効率化</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-display font-medium accent-text mb-2">モバイル</div>
-                <div className="text-sm text-text-600 font-body">デザイン</div>
+                <div className="text-2xl font-display font-medium accent-text mb-2">多言語対応</div>
+                <div className="text-sm text-text-600 font-body">Python・Java・C#等</div>
               </div>
             </div>
           </motion.div>
@@ -91,9 +89,10 @@ const About = () => {
               <div className="w-full h-96 bg-gradient-to-br from-primary-100 to-purple-100 rounded-2xl flex items-center justify-center">
                 <div className="text-center">
                   <div className="w-24 h-24 bg-white rounded-full mx-auto mb-4 flex items-center justify-center shadow-lg">
-                    <span className="text-2xl font-bold gradient-text">A</span>
+                    <span className="text-2xl font-bold gradient-text">石</span>
                   </div>
-                  <p className="text-gray-600 font-medium">About Image</p>
+                  <p className="text-gray-600 font-medium">石川陽</p>
+                  <p className="text-sm text-gray-500 mt-2">システムエンジニア & Webデザイナー</p>
                 </div>
               </div>
               

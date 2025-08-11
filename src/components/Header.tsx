@@ -20,7 +20,7 @@ const Header = () => {
     { name: 'ホーム', href: '#home' },
     { name: '私について', href: '#about' },
     { name: 'スキル', href: '#skills' },
-    { name: '作品', href: '#projects' },
+    { name: '成果物', href: '#projects' },
     { name: '経験', href: '#experience' },
     { name: 'お問い合わせ', href: '#contact' },
   ]
@@ -48,7 +48,7 @@ const Header = () => {
             whileHover={{ scale: 1.02 }}
             className="text-2xl font-display font-medium accent-text"
           >
-            Tanaka
+            石川
           </motion.div>
 
           {/* Desktop Navigation */}

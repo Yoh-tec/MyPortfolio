@@ -1,14 +1,14 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import { 
-  Figma, 
-  Adobe, 
   Code, 
-  Palette, 
-  Smartphone, 
+  Database, 
+  Cloud, 
   Globe,
   Zap,
-  Eye
+  Shield,
+  Terminal,
+  Smartphone
 } from 'lucide-react'
 
 const Skills = () => {
@@ -19,56 +19,56 @@ const Skills = () => {
 
   const skillCategories = [
     {
-      title: 'デザインツール',
-      icon: Palette,
-      skills: [
-        { name: 'Figma', level: 95 },
-        { name: 'Adobe XD', level: 90 },
-        { name: 'Photoshop', level: 85 },
-        { name: 'Illustrator', level: 80 },
-      ]
-    },
-    {
-      title: 'フロントエンド',
+      title: 'プログラミング言語',
       icon: Code,
       skills: [
-        { name: 'HTML/CSS', level: 95 },
+        { name: 'Python', level: 95 },
+        { name: 'Java', level: 90 },
+        { name: 'C#', level: 85 },
+        { name: 'Swift', level: 80 },
+      ]
+    },
+    {
+      title: 'Web技術',
+      icon: Globe,
+      skills: [
+        { name: 'HTML5/CSS', level: 95 },
         { name: 'JavaScript', level: 90 },
+        { name: 'TypeScript', level: 90 },
         { name: 'React', level: 85 },
-        { name: 'TypeScript', level: 80 },
       ]
     },
     {
-      title: 'UI/UX デザイン',
-      icon: Eye,
+      title: '業務効率化',
+      icon: Terminal,
       skills: [
-        { name: 'ユーザーリサーチ', level: 90 },
-        { name: 'ワイヤーフレーム', level: 95 },
-        { name: 'プロトタイピング', level: 85 },
-        { name: 'ユーザビリティテスト', level: 80 },
+        { name: 'Excelマクロ', level: 90 },
+        { name: 'シェルスクリプト', level: 85 },
+        { name: 'CLI開発', level: 85 },
+        { name: 'Chrome拡張', level: 80 },
       ]
     },
     {
-      title: 'その他のスキル',
-      icon: Zap,
+      title: 'インフラ・セキュリティ',
+      icon: Shield,
       skills: [
-        { name: 'レスポンシブデザイン', level: 95 },
-        { name: 'アクセシビリティ', level: 85 },
-        { name: 'SEO最適化', level: 80 },
-        { name: 'パフォーマンス最適化', level: 85 },
+        { name: 'AWS', level: 85 },
+        { name: 'セキュリティ監査', level: 90 },
+        { name: 'ファイル処理自動化', level: 95 },
+        { name: 'システム設計', level: 85 },
       ]
     }
   ]
 
   const technologies = [
-    { name: 'Figma', icon: '🎨' },
-    { name: 'Adobe Creative Suite', icon: '🖌️' },
+    { name: 'Python', icon: '🐍' },
+    { name: 'Java', icon: '☕' },
+    { name: 'C#', icon: '🔷' },
+    { name: 'Swift', icon: '🍎' },
     { name: 'React', icon: '⚛️' },
     { name: 'TypeScript', icon: '📘' },
-    { name: 'Tailwind CSS', icon: '🎨' },
-    { name: 'Next.js', icon: '⚡' },
-    { name: 'Node.js', icon: '🟢' },
-    { name: 'Git', icon: '📝' },
+    { name: 'AWS', icon: '☁️' },
+    { name: 'Excel VBA', icon: '📊' },
   ]
 
   return (
@@ -85,8 +85,8 @@ const Skills = () => {
             スキル & 技術
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            最新のデザインツールと技術を駆使して、
-            高品質なデジタルソリューションを提供しています。
+            多様なプログラミング言語と技術を駆使して、
+            セキュアで高品質なシステム開発を提供しています。
           </p>
         </motion.div>
 
@@ -137,7 +137,7 @@ const Skills = () => {
           className="text-center"
         >
           <h3 className="text-2xl font-bold text-gray-900 mb-8">
-            使用技術
+            主要技術
           </h3>
           <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-6">
             {technologies.map((tech, index) => (
@@ -169,23 +169,12 @@ const Skills = () => {
         >
           <div className="text-center">
             <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Globe className="w-8 h-8 text-primary-600" />
+              <Shield className="w-8 h-8 text-primary-600" />
             </div>
-            <h4 className="text-lg font-bold text-gray-900 mb-2">レスポンシブデザイン</h4>
+            <h4 className="text-lg font-bold text-gray-900 mb-2">セキュリティ重視</h4>
             <p className="text-gray-600">
-              すべてのデバイスで最適な体験を提供する
-              レスポンシブデザインを専門としています。
-            </p>
-          </div>
-          
-          <div className="text-center">
-            <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Smartphone className="w-8 h-8 text-primary-600" />
-            </div>
-            <h4 className="text-lg font-bold text-gray-900 mb-2">モバイルファースト</h4>
-            <p className="text-gray-600">
-              モバイルデバイスを最優先に考えた
-              デザインアプローチを採用しています。
+              サイバーセキュリティの専門知識を活かし、
+              安全で信頼性の高いシステムを構築します。
             </p>
           </div>
           
@@ -193,10 +182,21 @@ const Skills = () => {
             <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
               <Zap className="w-8 h-8 text-primary-600" />
             </div>
-            <h4 className="text-lg font-bold text-gray-900 mb-2">パフォーマンス</h4>
+            <h4 className="text-lg font-bold text-gray-900 mb-2">高速開発</h4>
             <p className="text-gray-600">
-              高速で軽量なWebサイトの構築を
-              心がけています。
+              最短1-2日での開発を実現し、
+              お客様のニーズに素早く対応します。
+            </p>
+          </div>
+          
+          <div className="text-center">
+            <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <Terminal className="w-8 h-8 text-primary-600" />
+            </div>
+            <h4 className="text-lg font-bold text-gray-900 mb-2">自動化</h4>
+            <p className="text-gray-600">
+              面倒なファイル処理や業務を自動化し、
+              効率化を実現します。
             </p>
           </div>
         </motion.div>

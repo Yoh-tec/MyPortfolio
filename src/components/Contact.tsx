@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
-import { Mail, Phone, MapPin, Send, Github, Linkedin, Twitter } from 'lucide-react'
+import { Mail, Phone, MapPin, Send, Github, Linkedin, Twitter, Instagram, Facebook } from 'lucide-react'
 
 const Contact = () => {
   const [ref, inView] = useInView({
@@ -12,8 +12,8 @@ const Contact = () => {
     {
       icon: Mail,
       title: 'メール',
-      value: 'tanaka@example.com',
-      href: 'mailto:tanaka@example.com'
+      value: 'contact@example.com',
+      href: 'mailto:contact@example.com'
     },
     {
       icon: Phone,
@@ -24,7 +24,7 @@ const Contact = () => {
     {
       icon: MapPin,
       title: '所在地',
-      value: '東京都渋谷区',
+      value: '東京都',
       href: '#'
     }
   ]
@@ -37,16 +37,28 @@ const Contact = () => {
       color: 'hover:bg-gray-900 hover:text-white'
     },
     {
-      icon: Linkedin,
-      name: 'LinkedIn',
+      icon: Twitter,
+      name: 'X (Twitter)',
+      href: '#',
+      color: 'hover:bg-black hover:text-white'
+    },
+    {
+      icon: Instagram,
+      name: 'Instagram',
+      href: '#',
+      color: 'hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 hover:text-white'
+    },
+    {
+      icon: Facebook,
+      name: 'Facebook',
       href: '#',
       color: 'hover:bg-blue-600 hover:text-white'
     },
     {
-      icon: Twitter,
-      name: 'Twitter',
+      icon: Linkedin,
+      name: 'LinkedIn',
       href: '#',
-      color: 'hover:bg-blue-400 hover:text-white'
+      color: 'hover:bg-blue-700 hover:text-white'
     }
   ]
 
@@ -94,7 +106,7 @@ const Contact = () => {
                       name="firstName"
                       required
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors duration-200"
-                      placeholder="田中"
+                      placeholder="石川"
                     />
                   </div>
                   <div>
@@ -107,7 +119,7 @@ const Contact = () => {
                       name="lastName"
                       required
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors duration-200"
-                      placeholder="太郎"
+                      placeholder="陽"
                     />
                   </div>
                 </div>
@@ -149,11 +161,12 @@ const Contact = () => {
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors duration-200"
                   >
                     <option value="">選択してください</option>
-                    <option value="web-design">Webデザイン</option>
-                    <option value="ui-ux">UI/UXデザイン</option>
-                    <option value="branding">ブランディング</option>
-                    <option value="development">フロントエンド開発</option>
-                    <option value="consulting">コンサルティング</option>
+                    <option value="web-app">Webアプリケーション開発</option>
+                    <option value="excel-macro">Excelマクロ開発</option>
+                    <option value="portfolio">ポートフォリオ作成</option>
+                    <option value="cli-program">CLIプログラム</option>
+                    <option value="aws-infra">AWSインフラ構築・移行</option>
+                    <option value="chrome-extension">Chrome拡張機能開発</option>
                     <option value="other">その他</option>
                   </select>
                 </div>
@@ -243,7 +256,7 @@ const Contact = () => {
               <h3 className="text-2xl font-bold text-gray-900 mb-6">
                 ソーシャルメディア
               </h3>
-              <div className="flex space-x-4">
+              <div className="flex flex-wrap gap-4">
                 {socialLinks.map((social, index) => (
                   <motion.a
                     key={social.name}
@@ -305,18 +318,18 @@ const Contact = () => {
               <div className="space-y-3">
                 <div>
                   <h4 className="font-semibold text-gray-900 text-sm">
-                    Q: お見積もりは無料ですか？
+                    Q: 開発期間はどのくらいですか？
                   </h4>
                   <p className="text-gray-600 text-sm">
-                    A: はい、初回のお見積もりは完全無料です。
+                    A: 最短1-2日で開発可能です。プロジェクトの規模により調整いたします。
                   </p>
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-900 text-sm">
-                    Q: 納期はどのくらいですか？
+                    Q: セキュリティは大丈夫ですか？
                   </h4>
                   <p className="text-gray-600 text-sm">
-                    A: プロジェクトの規模により異なりますが、通常2-8週間程度です。
+                    A: サイバーセキュリティの専門知識を活かし、安全で信頼性の高いシステムを構築します。
                   </p>
                 </div>
               </div>

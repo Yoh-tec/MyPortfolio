@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { ArrowDown, Github, Linkedin, Twitter, Sparkles } from 'lucide-react'
+import { ArrowDown, Github, Linkedin, Twitter, Instagram, Facebook, Sparkles } from 'lucide-react'
 import PlayfulButton from './PlayfulButton'
 
 const Hero = () => {
@@ -36,7 +36,7 @@ const Hero = () => {
               className="inline-flex items-center px-6 py-2 bg-base-200 text-text-700 border border-base-300 text-sm font-body mb-8"
             >
               <span className="w-1 h-1 bg-primary-500 mr-3"></span>
-              フリーランスWebデザイナー
+              システムエンジニア & Webデザイナー
             </motion.div>
 
             <motion.h1
@@ -63,7 +63,7 @@ const Hero = () => {
                   rotate: [0, -2, 2, 0],
                 }}
               >
-                田中太郎
+                石川陽
               </motion.span>
               <motion.span
                 initial={{ opacity: 0, x: 20 }}
@@ -80,9 +80,9 @@ const Hero = () => {
               transition={{ delay: 0.6, duration: 0.6 }}
               className="text-lg text-text-600 mb-10 leading-relaxed font-body max-w-2xl"
             >
-              美しいデザインと優れたユーザー体験を創造するWebデザイナーです。
-              モダンな技術とクリエイティブな視点で、ブランドの価値を最大化する
-              デジタルソリューションを提供しています。
+              サイバーセキュリティの専門知識を活かし、安全で高品質なシステム開発を提供しています。
+              最短1-2日での開発が可能で、効率化とセキュリティを重視した
+              ソリューションを提供しています。
             </motion.p>
 
             <motion.div
@@ -97,7 +97,7 @@ const Hero = () => {
                   whileHover={{ scale: 1.05 }}
                 >
                   <Sparkles size={16} className="mr-2" />
-                  作品を見る
+                  成果物を見る
                 </motion.div>
               </PlayfulButton>
               <PlayfulButton variant="secondary">
@@ -116,6 +116,7 @@ const Hero = () => {
                 whileHover={{ scale: 1.05, y: -2 }}
                 href="#"
                 className="w-12 h-12 bg-base-200 hover:bg-base-300 text-text-600 hover:text-primary-500 border border-base-300 flex items-center justify-center transition-all duration-200"
+                title="GitHub"
               >
                 <Github size={18} />
               </motion.a>
@@ -123,15 +124,33 @@ const Hero = () => {
                 whileHover={{ scale: 1.05, y: -2 }}
                 href="#"
                 className="w-12 h-12 bg-base-200 hover:bg-base-300 text-text-600 hover:text-primary-500 border border-base-300 flex items-center justify-center transition-all duration-200"
+                title="X (Twitter)"
               >
-                <Linkedin size={18} />
+                <Twitter size={18} />
               </motion.a>
               <motion.a
                 whileHover={{ scale: 1.05, y: -2 }}
                 href="#"
                 className="w-12 h-12 bg-base-200 hover:bg-base-300 text-text-600 hover:text-primary-500 border border-base-300 flex items-center justify-center transition-all duration-200"
+                title="Instagram"
               >
-                <Twitter size={18} />
+                <Instagram size={18} />
+              </motion.a>
+              <motion.a
+                whileHover={{ scale: 1.05, y: -2 }}
+                href="#"
+                className="w-12 h-12 bg-base-200 hover:bg-base-300 text-text-600 hover:text-primary-500 border border-base-300 flex items-center justify-center transition-all duration-200"
+                title="Facebook"
+              >
+                <Facebook size={18} />
+              </motion.a>
+              <motion.a
+                whileHover={{ scale: 1.05, y: -2 }}
+                href="#"
+                className="w-12 h-12 bg-base-200 hover:bg-base-300 text-text-600 hover:text-primary-500 border border-base-300 flex items-center justify-center transition-all duration-200"
+                title="LinkedIn"
+              >
+                <Linkedin size={18} />
               </motion.a>
             </motion.div>
           </motion.div>
@@ -148,7 +167,7 @@ const Hero = () => {
               <div className="w-full h-96 lg:h-[500px] bg-base-200 border border-base-300 flex items-center justify-center">
                 <div className="text-center">
                   <div className="w-40 h-40 bg-base-50 border-2 border-primary-300 mx-auto mb-6 flex items-center justify-center">
-                    <span className="text-5xl font-display font-medium accent-text">T</span>
+                    <span className="text-5xl font-display font-medium accent-text">石</span>
                   </div>
                   <p className="text-text-600 font-body">プロフィール画像</p>
                 </div>

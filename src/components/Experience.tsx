@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
-import { Calendar, MapPin, Building } from 'lucide-react'
+import { Calendar, MapPin, Building, GraduationCap, Shield, Code } from 'lucide-react'
 
 const Experience = () => {
   const [ref, inView] = useInView({
@@ -11,73 +11,78 @@ const Experience = () => {
   const experiences = [
     {
       id: 1,
-      title: 'シニアWebデザイナー',
-      company: 'テックスタートアップ株式会社',
+      title: 'システムエンジニア',
+      company: 'サイバーセキュリティ企業',
       location: '東京',
-      period: '2022年 - 現在',
-      description: 'スタートアップ企業でUI/UXデザインとフロントエンド開発を担当。製品のブランディングからユーザー体験の改善まで幅広く携わる。',
+      period: '2025年 - 現在',
+      description: 'サイバーセキュリティ企業でシステムエンジニアとして勤務。セキュリティの視点から安全で信頼性の高いシステム開発を担当。',
       achievements: [
-        '製品のユーザーエンゲージメントを40%向上',
-        'デザインシステムの構築と実装',
-        'チーム内でのデザインガイドライン策定'
+        'セキュリティを重視したシステム設計・開発',
+        'ファイル内部調査の自動化ツール開発',
+        'セキュリティ監査対応システムの構築'
       ],
-      technologies: ['Figma', 'React', 'TypeScript', 'Design Systems']
-    },
-    {
-      id: 2,
-      title: 'UI/UXデザイナー',
-      company: 'デジタルエージェンシー',
-      location: '大阪',
-      period: '2020年 - 2022年',
-      description: '大手企業のWebサイトやモバイルアプリのUI/UXデザインを担当。クライアントとの密接なコミュニケーションを通じて要件を理解し、最適なソリューションを提供。',
-      achievements: [
-        '15以上の企業サイトのデザインを担当',
-        'モバイルアプリのユーザビリティテスト実施',
-        'デザインチームのリードを担当'
-      ],
-      technologies: ['Adobe XD', 'Sketch', 'InVision', 'ユーザビリティテスト']
-    },
-    {
-      id: 3,
-      title: 'ジュニアデザイナー',
-      company: 'Web制作会社',
-      location: '名古屋',
-      period: '2019年 - 2020年',
-      description: 'Webデザイナーとしてキャリアをスタート。HTML/CSSコーディングからデザインまで幅広く学習し、実践的なスキルを身につける。',
-      achievements: [
-        '20以上のWebサイト制作に参加',
-        'レスポンシブデザインの実装',
-        'SEO対策を考慮したデザイン設計'
-      ],
-      technologies: ['HTML', 'CSS', 'JavaScript', 'Photoshop']
+      technologies: ['Python', 'Java', 'C#', 'AWS', 'セキュリティ監査']
     }
   ]
 
   const education = [
     {
       id: 1,
-      degree: 'デザイン学士',
-      school: 'デザイン専門大学',
-      period: '2015年 - 2019年',
-      description: 'グラフィックデザインとWebデザインを専攻。ユーザーエクスペリエンスデザインの基礎を学び、卒業制作ではモバイルアプリのUIデザインを制作。'
+      degree: '情報セキュリティ専攻',
+      school: '法政大学情報系学科',
+      period: '2021年 - 2025年',
+      description: '情報セキュリティを専攻し、サイバーセキュリティの基礎から応用まで幅広く学習。セキュリティ技術とシステム開発の両面で専門知識を習得。'
     }
   ]
 
-  const certifications = [
+  const services = [
     {
       id: 1,
-      name: 'Google UX Design Certificate',
-      issuer: 'Google',
-      year: '2021',
-      description: 'ユーザーエクスペリエンスデザインの包括的なコースを修了。'
+      name: 'Webアプリケーション開発',
+      description: 'React、TypeScript等を使用したモダンなWebアプリケーション開発',
+      icon: Code
     },
     {
       id: 2,
-      name: 'Figma Design Systems',
-      issuer: 'Figma',
-      year: '2022',
-      description: 'デザインシステムの構築と管理について学習。'
+      name: 'Excelマクロ開発',
+      description: '業務効率化のためのExcelマクロ・VBA開発',
+      icon: Code
+    },
+    {
+      id: 3,
+      name: 'ポートフォリオ作成',
+      description: '個人・企業向けのポートフォリオサイト制作',
+      icon: Code
+    },
+    {
+      id: 4,
+      name: 'CLIプログラム',
+      description: 'コマンドラインでの作業効率化ツール開発',
+      icon: Code
+    },
+    {
+      id: 5,
+      name: 'AWSインフラ構築・移行',
+      description: 'クラウドインフラの設計・構築・移行支援',
+      icon: Code
+    },
+    {
+      id: 6,
+      name: 'Chrome拡張機能開発',
+      description: 'ブラウザの作業効率化のための拡張機能開発',
+      icon: Code
     }
+  ]
+
+  const languages = [
+    { name: 'Python', level: 95 },
+    { name: 'Java', level: 90 },
+    { name: 'C#', level: 85 },
+    { name: 'Swift', level: 80 },
+    { name: 'Excelマクロ', level: 90 },
+    { name: 'シェルスクリプト', level: 85 },
+    { name: 'HTML5/CSS/JS', level: 95 },
+    { name: 'TypeScript', level: 90 }
   ]
 
   return (
@@ -95,7 +100,7 @@ const Experience = () => {
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             これまでのキャリアと学びの軌跡をご紹介します。
-            各経験を通じて、デザインと技術の両面で成長を続けています。
+            情報セキュリティの専門知識を活かしたシステム開発を提供しています。
           </p>
         </motion.div>
 
@@ -168,10 +173,10 @@ const Experience = () => {
             </div>
           </div>
 
-          {/* Education & Certifications */}
+          {/* Education & Services */}
           <div>
             <h3 className="text-2xl font-bold text-gray-900 mb-8">
-              学歴 & 資格
+              学歴 & サービス
             </h3>
             
             {/* Education */}
@@ -185,7 +190,10 @@ const Experience = () => {
                   transition={{ duration: 0.8, delay: 0.6 + index * 0.1 }}
                   className="card p-4 mb-4"
                 >
-                  <h5 className="font-bold text-gray-900 mb-1">{edu.degree}</h5>
+                  <div className="flex items-center mb-2">
+                    <GraduationCap size={16} className="text-primary-600 mr-2" />
+                    <h5 className="font-bold text-gray-900">{edu.degree}</h5>
+                  </div>
                   <p className="text-gray-600 text-sm mb-2">{edu.school}</p>
                   <p className="text-gray-500 text-xs mb-2">{edu.period}</p>
                   <p className="text-gray-600 text-sm">{edu.description}</p>
@@ -193,22 +201,26 @@ const Experience = () => {
               ))}
             </div>
 
-            {/* Certifications */}
-            <div>
-              <h4 className="text-lg font-bold text-gray-900 mb-4">資格</h4>
-              {certifications.map((cert, index) => (
-                <motion.div
-                  key={cert.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={inView ? { opacity: 1, y: 0 } : {}}
-                  transition={{ duration: 0.8, delay: 0.8 + index * 0.1 }}
-                  className="card p-4 mb-4"
-                >
-                  <h5 className="font-bold text-gray-900 mb-1">{cert.name}</h5>
-                  <p className="text-gray-600 text-sm mb-2">{cert.issuer} • {cert.year}</p>
-                  <p className="text-gray-600 text-sm">{cert.description}</p>
-                </motion.div>
-              ))}
+            {/* Services */}
+            <div className="mb-8">
+              <h4 className="text-lg font-bold text-gray-900 mb-4">対応可能案件</h4>
+              <div className="space-y-3">
+                {services.map((service, index) => (
+                  <motion.div
+                    key={service.id}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={inView ? { opacity: 1, y: 0 } : {}}
+                    transition={{ duration: 0.8, delay: 0.8 + index * 0.1 }}
+                    className="flex items-start space-x-3 p-3 bg-gray-50 rounded-lg"
+                  >
+                    <service.icon size={16} className="text-primary-600 mt-1 flex-shrink-0" />
+                    <div>
+                      <h5 className="font-semibold text-gray-900 text-sm">{service.name}</h5>
+                      <p className="text-gray-600 text-xs">{service.description}</p>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
             </div>
 
             {/* Skills Summary */}
@@ -218,35 +230,19 @@ const Experience = () => {
               transition={{ duration: 0.8, delay: 1 }}
               className="mt-8"
             >
-              <h4 className="text-lg font-bold text-gray-900 mb-4">専門分野</h4>
+              <h4 className="text-lg font-bold text-gray-900 mb-4">対応可能言語</h4>
               <div className="space-y-3">
-                <div>
-                  <div className="flex justify-between text-sm mb-1">
-                    <span>UI/UX デザイン</span>
-                    <span>95%</span>
+                {languages.slice(0, 4).map((lang, index) => (
+                  <div key={lang.name}>
+                    <div className="flex justify-between text-sm mb-1">
+                      <span>{lang.name}</span>
+                      <span>{lang.level}%</span>
+                    </div>
+                    <div className="w-full bg-gray-200 rounded-full h-2">
+                      <div className="bg-primary-600 h-2 rounded-full" style={{ width: `${lang.level}%` }}></div>
+                    </div>
                   </div>
-                  <div className="w-full bg-gray-200 rounded-full h-2">
-                    <div className="bg-primary-600 h-2 rounded-full" style={{ width: '95%' }}></div>
-                  </div>
-                </div>
-                <div>
-                  <div className="flex justify-between text-sm mb-1">
-                    <span>フロントエンド開発</span>
-                    <span>85%</span>
-                  </div>
-                  <div className="w-full bg-gray-200 rounded-full h-2">
-                    <div className="bg-primary-600 h-2 rounded-full" style={{ width: '85%' }}></div>
-                  </div>
-                </div>
-                <div>
-                  <div className="flex justify-between text-sm mb-1">
-                    <span>プロジェクト管理</span>
-                    <span>80%</span>
-                  </div>
-                  <div className="w-full bg-gray-200 rounded-full h-2">
-                    <div className="bg-primary-600 h-2 rounded-full" style={{ width: '80%' }}></div>
-                  </div>
-                </div>
+                ))}
               </div>
             </motion.div>
           </div>

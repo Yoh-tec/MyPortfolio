@@ -10,7 +10,6 @@ interface PlayfulButtonProps {
 
 const PlayfulButton = ({ children, onClick, variant = 'primary', className = '' }: PlayfulButtonProps) => {
   const [isPressed, setIsPressed] = useState(false)
-  const [isHovered, setIsHovered] = useState(false)
 
   const baseClasses = "relative overflow-hidden font-body transition-all duration-200"
   const variantClasses = {
@@ -22,8 +21,6 @@ const PlayfulButton = ({ children, onClick, variant = 'primary', className = '' 
     <motion.button
       className={`${baseClasses} ${variantClasses[variant]} ${className}`}
       onClick={onClick}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
       onMouseDown={() => setIsPressed(true)}
       onMouseUp={() => setIsPressed(false)}
       whileHover={{ scale: 1.02 }}
