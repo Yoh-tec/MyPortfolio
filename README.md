@@ -1,4 +1,4 @@
-# 田中太郎 - Webデザイナーポートフォリオ
+# Webデザイナーポートフォリオ
 
 モダンで美しいWebデザイナーのポートフォリオサイトです。React、TypeScript、Tailwind CSS、Framer Motionを使用して構築されています。
 
