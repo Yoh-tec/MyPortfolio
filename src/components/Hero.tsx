@@ -1,8 +1,11 @@
+import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { ArrowDown, Github, Linkedin, Twitter, Instagram, Facebook, Sparkles } from 'lucide-react'
 import PlayfulButton from './PlayfulButton'
 
 const Hero = () => {
+  const [imageError, setImageError] = useState(false)
+
   const scrollToAbout = () => {
     const element = document.querySelector('#about')
     if (element) {
@@ -163,15 +166,31 @@ const Hero = () => {
             className="relative"
           >
             <div className="relative">
-              {/* Placeholder for hero image */}
-              <div className="w-full h-96 lg:h-[500px] bg-base-200 border border-base-300 flex items-center justify-center">
-                <div className="text-center">
-                  <div className="w-40 h-40 bg-base-50 border-2 border-primary-300 mx-auto mb-6 flex items-center justify-center">
-                    <span className="text-5xl font-display font-medium accent-text">石</span>
+              {/* Profile Image */}
+              <motion.div
+                initial={{ scale: 0.9, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                transition={{ delay: 0.3, duration: 0.8 }}
+                className="w-full h-96 lg:h-[500px] relative overflow-hidden border border-base-300 bg-base-200"
+              >
+                {!imageError ? (
+                  <img
+                    src="/profile.jpg"
+                    alt="石川陽 - プロフィール写真"
+                    className="w-full h-full object-cover object-center"
+                    onError={() => setImageError(true)}
+                  />
+                ) : (
+                  <div className="w-full h-full flex items-center justify-center">
+                    <div className="text-center">
+                      <div className="w-40 h-40 bg-base-50 border-2 border-primary-300 mx-auto mb-6 flex items-center justify-center">
+                        <span className="text-5xl font-display font-medium accent-text">石</span>
+                      </div>
+                      <p className="text-text-600 font-body">プロフィール画像</p>
+                    </div>
                   </div>
-                  <p className="text-text-600 font-body">プロフィール画像</p>
-                </div>
-              </div>
+                )}
+              </motion.div>
               
               {/* Floating elements */}
               <motion.div

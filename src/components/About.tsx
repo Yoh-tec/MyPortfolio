@@ -1,8 +1,10 @@
+import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import { Award, Users, Clock, Target } from 'lucide-react'
 
 const About = () => {
+  const [imageError, setImageError] = useState(false)
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
@@ -85,16 +87,32 @@ const About = () => {
             className="relative"
           >
             <div className="relative">
-              {/* Placeholder for about image */}
-              <div className="w-full h-96 bg-gradient-to-br from-primary-100 to-purple-100 rounded-2xl flex items-center justify-center">
-                <div className="text-center">
-                  <div className="w-24 h-24 bg-white rounded-full mx-auto mb-4 flex items-center justify-center shadow-lg">
-                    <span className="text-2xl font-bold gradient-text">石</span>
+              {/* Profile Image */}
+              <motion.div
+                initial={{ scale: 0.95, opacity: 0 }}
+                animate={inView ? { scale: 1, opacity: 1 } : {}}
+                transition={{ duration: 0.8, delay: 0.5 }}
+                className="w-full h-96 relative overflow-hidden bg-gradient-to-br from-primary-100 to-purple-100 rounded-2xl"
+              >
+                {!imageError ? (
+                  <img
+                    src="/profile.jpg"
+                    alt="石川陽 - プロフィール写真"
+                    className="w-full h-full object-cover object-center rounded-2xl"
+                    onError={() => setImageError(true)}
+                  />
+                ) : (
+                  <div className="w-full h-full flex items-center justify-center">
+                    <div className="text-center">
+                      <div className="w-24 h-24 bg-white rounded-full mx-auto mb-4 flex items-center justify-center shadow-lg">
+                        <span className="text-2xl font-bold gradient-text">石</span>
+                      </div>
+                      <p className="text-gray-600 font-medium">石川陽</p>
+                      <p className="text-sm text-gray-500 mt-2">システムエンジニア & Webデザイナー</p>
+                    </div>
                   </div>
-                  <p className="text-gray-600 font-medium">石川陽</p>
-                  <p className="text-sm text-gray-500 mt-2">システムエンジニア & Webデザイナー</p>
-                </div>
-              </div>
+                )}
+              </motion.div>
               
               {/* Decorative elements */}
               <div className="absolute -top-4 -right-4 w-16 h-16 bg-primary-200 rounded-full opacity-60"></div>
